@@ -37,12 +37,13 @@ public class Main{
         
         String actualCadena = cad.substring(lim_inf,lim_sup+1);
         
+       //DP
         if(datesCurrent.containsKey(actualCadena)){
             return datesCurrent.get(actualCadena); 
         }
         
         if(actualCadena.charAt(0)==actualCadena.charAt(actualCadena.length()-1)){
-            int res = Math.max(2 + resolveAux(cad, lim_inf+1, lim_sup-1),Math.max(resolveAux(cad, lim_inf+1, lim_sup),resolveAux(cad, lim_inf, lim_sup-1)));
+            int res = 2 + resolveAux(cad, lim_inf+1, lim_sup-1);
             datesCurrent.put(actualCadena, res);
             return res;
         } 
