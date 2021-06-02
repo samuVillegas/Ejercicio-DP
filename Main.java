@@ -1,7 +1,11 @@
+/**
+ * Ejercicio realizado por:
+ *  Julian Andres Ramirez Jimenez
+ *  Samuel David Villegas Bedoya
+ * Longest Palindrome
+ */
 import java.util.HashMap;
-
 import java.util.Scanner;
-
 
 import java.util.Map;
 
@@ -33,7 +37,6 @@ public class Main{
     public static int resolveAux(String cad, int lim_inf, int lim_sup){
         if(cad.isEmpty() || lim_sup<lim_inf )return 0;
         if(lim_sup==lim_inf) return 1;
-        
         
         String actualCadena = cad.substring(lim_inf,lim_sup+1);
         
